@@ -1,0 +1,18 @@
+.header {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 50px;
+    color: #FF6060;
+    ;
+}
+
+nav ul {
+    display: flex;
+    gap: 45px;
+}
+
+nav ul li:first-child {
+    text-decoration: underline;
+}
+/* .navLink {} */
