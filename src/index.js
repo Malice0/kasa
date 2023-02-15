@@ -8,7 +8,7 @@ import Home from './Pages/Home/home'
 import About from './Pages/About/index'
 import Housing from './Pages/Housing/index'
 import Header from './Components/header/Hearder'
-import Footer from './Components/header/Footer/Footer'
+import Footer from './Components/Footer/Footer'
 import Error from './Components/Error/index'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
@@ -18,16 +18,14 @@ const router = createBrowserRouter([
         path: '/',
         element: <Home />,
         errorElement: <Error />,
-        children: [
-            {
-                path: 'about',
-                element: <About />,
-            },
-            {
-                path: 'housing',
-                element: <Housing />,
-            },
-        ],
+    },
+    {
+        path: 'about',
+        element: <About />,
+    },
+    {
+        path: 'housing',
+        element: <Housing />,
     },
 ])
 
