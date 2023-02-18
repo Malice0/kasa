@@ -1,0 +1,21 @@
+.galleryCard {
+    flex-basis: calc(90%/3);
+    width: 300px;
+    border-radius: 10px;
+}
+.galleryCard img {
+    background-size: cover;
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+}
+.galleryCard h3 {
+    font-size: large;
+    margin-top: 0px;
+}
+
+@media screen and (max-width: 500px) {
+    .galleryCard {
+        width: 100%;
+    }
+}

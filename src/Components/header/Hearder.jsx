@@ -1,19 +1,19 @@
 import '../../Styles/Header.css'
-// import { Link } from 'react-router-dom'
+import logo from '../../assets/logo.svg'
+import { Link } from 'react-router-dom'
 
 function Header() {
     return (
-        <div className="header">
-            <img src="" alt="Logo Kasa"></img>
+        <div className='header'>
+            <img src={logo} alt="Logo Kasa" />
             <nav>
-                {/* <Link to="/">Accueil</Link>
-                <Link to="/about">A propos</Link> */}
                 <ul>
-                    <li>Accueil</li>
-                    <li>A propos</li>
+                <Link to='/' className='navLink'>Accueil</Link>
+                <Link to='/about' className='navLink'>A propos</Link>
                 </ul>
             </nav>
         </div>
+    
     )
 }
 

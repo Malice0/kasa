@@ -2,17 +2,33 @@
     background-color: transparent;
     display: flex;
     justify-content: space-between;
-    padding: 40px 50px;
+    margin: 40px 75px;
+}
+
+.navLink {
     color: #FF6060;
-    ;
+}
+
+.navLink:first-child {
+    text-decoration: underline;
+}
+
+nav {
+    display: flex;
+    align-items: center;
 }
 
 nav ul {
     display: flex;
-    gap: 45px;
+    gap: 35px;
 }
 
-nav ul li:first-child {
-    text-decoration: underline;
+@media all and (max-width: 500px) {
+    .header {
+        margin: 20px 25px;
+    }
+    
+    .header img {
+        width: 35%;
+    }
 }
-/* .navLink {} */

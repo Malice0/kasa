@@ -11,29 +11,26 @@ import Header from './Components/header/Hearder'
 import Footer from './Components/Footer/Footer'
 import Error from './Components/Error/index'
 
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import {
+    BrowserRouter,
+    Routes,
+    Route,
+} from 'react-router-dom'
 
-const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <Home />,
-        errorElement: <Error />,
-    },
-    {
-        path: 'about',
-        element: <About />,
-    },
-    {
-        path: 'housing',
-        element: <Housing />,
-    },
-])
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
     <React.StrictMode>
-        <Header />
-        <RouterProvider router={router} />
-        <Footer />
+        <BrowserRouter>
+            <Header />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/housing/:id" element={<Housing />} />
+                <Route path="*" element={<Error />} />
+            </Routes>
+            <Footer />
+        </BrowserRouter>
     </React.StrictMode>
 )

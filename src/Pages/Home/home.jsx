@@ -1,19 +1,13 @@
 import '../../Styles/Home.css'
+import Main from '../../Components/main'
 
 function Home() {
     return (
         <div>
-            <div className='title'>
+            <div className="banner">
                 <h1>Chez vous, partout et ailleurs</h1>
             </div>
-            <div className="housingContent">
-                <div className="housingItem">Titre de la location</div>
-                <div className="housingItem">Titre de la location</div>
-                <div className="housingItem">Titre de la location</div>
-                <div className="housingItem">Titre de la location</div>
-                <div className="housingItem">Titre de la location</div>
-                <div className="housingItem">Titre de la location</div>
-            </div>
+            <Main />
         </div>
     )
 }
