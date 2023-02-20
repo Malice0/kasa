@@ -1,14 +1,12 @@
-import '../../Styles/Home.css'
 import Main from '../../Components/main'
+import Banner from '../../Components/Banner/Banner'
 
 function Home() {
     return (
-        <div>
-            <div className="banner">
-                <h1>Chez vous, partout et ailleurs</h1>
-            </div>
+        <main>
+            <Banner />
             <Main />
-        </div>
+        </main>
     )
 }
 

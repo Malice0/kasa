@@ -4,7 +4,7 @@ import '../../Styles/Main.css'
 
 function Main() {
     return (
-        <main className='homeGallery'>
+        <div className='homeGallery'>
             {Datas.map(data => {
                 return (
                     <Card
@@ -15,7 +15,7 @@ function Main() {
                     />
                 )
             })}
-        </main>
+        </div>
     )
 }
 

@@ -5,26 +5,32 @@
     background: #F7F7F7;
     border-radius: 25px;
     margin: 40px 70px 70px 70px;
-    padding: 35px 20px;
-    gap: 35px;
+    padding: 20px 50px;
+    gap: 5%;
 }
 
 .cartItem {
     width: 300px;
     border-radius: 10px;
 }
+
 .cartItem img {
     background-size: cover;
     width: 100%;
     border-radius: 10px 10px 0px 0px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
+    .homeGallery {
+        justify-content: space-between;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 650px) {
     .homeGallery {
         flex-direction: column;
-        margin: 30px;
         padding: 0;
         background: transparent;
-        gap: 20px;
     }
 }
