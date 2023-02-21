@@ -24,7 +24,15 @@ nav ul {
 }
 
 @media all and (max-width: 620px) {
+    .header {
+        margin: 40px 20px;
+    }
+    
     .header img {
         width: 35%;
+    }
+
+    nav ul {
+        gap: 10px;
     }
 }
