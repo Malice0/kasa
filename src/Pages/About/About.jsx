@@ -1,6 +1,6 @@
 import BannerAbout from '../../Components/Banner/BannerAbout'
+import Aboutcollapse from '../../Components/Collapse/Collapse'
 import '../../Styles/About.css'
-import { useState } from 'react'
 
 function About() {
     const aboutDatas = [
@@ -30,10 +30,6 @@ function About() {
         },
     ]
 
-    function handleClick() {
-        alert('Clicked')
-    }
-
     return (
         <div>
             <BannerAbout />
@@ -46,8 +42,10 @@ function About() {
                             content={data.content}
                             className="aboutContent"
                         >
-                            <h2>{data.title}</h2>
-                            <p>{data.content}</p>
+                            <Aboutcollapse
+                                title={data.title}
+                                content={data.content}
+                            />
                         </div>
                     )
                 })}
@@ -56,14 +54,13 @@ function About() {
     )
 }
 
-
 /**
  * Avec la flèche sur le coté useState onclick
  * isOpen ?
  * downArrow false
  * UpArrow true
  * Quand le sens de la flèche chance le statut change.
- * 
+ *
  * Bon après faut ajouter une class quand c'est open ou close
  * pour l'animation
  */
