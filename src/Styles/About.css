@@ -25,6 +25,7 @@
 @media screen and (max-width: 650px) {
     .aboutContent {
         margin: 20px;
+        visibility: 0;
     }
 
     .aboutContent h2 {

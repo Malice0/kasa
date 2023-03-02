@@ -1,22 +1,28 @@
 import Datas from '../../datas/data'
 import { useParams } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import Aboutcollapse from '../../Components/Collapse/Collapse'
 import '../../Styles/Housing.css'
-import Rating from '../../Components/Rating'
 import pinkstar from '../../assets/pinkStart.svg'
 import greystar from '../../assets/greyStart.svg'
+import Slideshow from '../../Components/Slideshow/Slideshow'
 
-function Housing() {
+export default function Housing() {
     const id = useParams('id').id
     const data = Datas.filter((data) => data.id === id)
     const rating = data[0].rating
     const host = data[0].host.picture
+    const equipment = [data[0].equipments]
+
+    const [isSlide, setIsSlide] = useState([])
+    useEffect(() => {
+        const data = Datas.filter((data) => data.id === id)
+		setIsSlide(data[0].pictures);
+	}, [id]);
 
     return (
         <main className="main">
-            <div className="img">
-                <img src={data[0].cover} alt="" />
-            </div>
+            <Slideshow data={data[0]} src={data[0].cover} alt={data[0].title} isSlide={isSlide} />
             <div className="HousingContent">
                 <div className="content">
                     <h1>{data[0].title}</h1>
@@ -32,7 +38,6 @@ function Housing() {
                         <p>{data[0].host.name}</p>
                         <div className="hostImg"><img src={host} alt="" /></div>
                     </div>
-                    {/* rating */}
                     <div className="rating">
                         {[...Array(5)].map((star, index) => {
                             const rateValue = index + 1
@@ -49,7 +54,6 @@ function Housing() {
                             )
                         })}
                     </div>
-                    {/* <Rating rate={rating}/> */}
                 </div>
             </div>
 
@@ -63,7 +67,7 @@ function Housing() {
                 <div className="collapse collapseTag">
                     <Aboutcollapse
                         title={'Équipements'}
-                        content={data[0].equipments}
+                        content={equipment}
                     />
                 </div>
             </div>
@@ -71,4 +75,3 @@ function Housing() {
     )
 }
 
-export default Housing
