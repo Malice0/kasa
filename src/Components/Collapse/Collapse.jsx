@@ -18,7 +18,8 @@ function Aboutcollapse({ title, content }) {
                     alt="montrer le contenu"
                 />
             </h2>
-            <p className={isOpen ? 'collapseContent' : 'collapseContentHidden'}>{content}</p>
+            <p className={isOpen ? 'collapseContent' : 'collapseContentHidden'}>
+                {content}</p>
         </div>
     )
 }

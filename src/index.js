@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 import './Styles/normalize.css'
-import './index.css'
 
 import Home from './Pages/Home/home'
 import About from './Pages/About/About'

@@ -33,6 +33,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .collapse p {
