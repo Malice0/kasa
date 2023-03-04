@@ -9,17 +9,6 @@
     gap: 5%;
 }
 
-.cartItem {
-    width: 300px;
-    border-radius: 10px;
-}
-
-.cartItem img {
-    background-size: cover;
-    width: 100%;
-    border-radius: 10px 10px 0px 0px;
-}
-
 @media screen and (max-width: 900px) {
     .homeGallery {
         justify-content: space-between;

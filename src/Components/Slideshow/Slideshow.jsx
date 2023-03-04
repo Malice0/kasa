@@ -27,13 +27,15 @@ function Slideshow({ data, alt }) {
                             onClick={prevSlide}
                         />
                     </div>
-                    <div className='imgBullet'>
-                    <img
-                        src={data.pictures[isIndex]}
-                        alt={alt}
-                        className="imgSlider"
-                    />
-                    <p key={isIndex}>{isIndex +1}/{images.length}</p>
+                    <div className="imgBullet">
+                        <img
+                            src={data.pictures[isIndex]}
+                            alt={alt}
+                            className="imgSlider"
+                        />
+                        <p key={isIndex}>
+                            {isIndex + 1}/{images.length}
+                        </p>
                     </div>
                     <div id="arrow" className="nextImg">
                         <img

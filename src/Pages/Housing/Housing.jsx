@@ -12,12 +12,15 @@ export default function Housing() {
     const data = Datas.filter((data) => data.id === id)
     const rating = data[0].rating
     const host = data[0].host.picture
-    const equipment = [data[0].equipments]
-    // console.log(equipment);
+    const equipment = data[0].equipments
+    // const equip = equipment.forEach(item => {
+    //     console.log(item);
+    // });
+    // console.log(equip)
 
     return (
         <main className="main">
-            <Slideshow data={data[0]} alt={data[0].title}/>
+            <Slideshow data={data[0]} alt={data[0].title} />
             <div className="HousingContent">
                 <div className="content">
                     <h1>{data[0].title}</h1>
@@ -31,7 +34,9 @@ export default function Housing() {
                 <div className="content ">
                     <div className="host">
                         <p>{data[0].host.name}</p>
-                        <div className="hostImg"><img src={host} alt="" /></div>
+                        <div className="hostImg">
+                            <img src={host} alt="" />
+                        </div>
                     </div>
                     <div className="rating">
                         {[...Array(5)].map((star, index) => {
@@ -60,13 +65,9 @@ export default function Housing() {
                     />
                 </div>
                 <div className="collapse collapseTag">
-                    <Aboutcollapse
-                        title={'Équipements'}
-                        content={equipment}
-                    />
+                    <Aboutcollapse title={'Équipements'} content={equipment} />
                 </div>
             </div>
         </main>
     )
 }
-

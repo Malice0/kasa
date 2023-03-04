@@ -23,9 +23,10 @@
 
 .imgBullet p {
     position: absolute;
-    top: 85%;
+    top: 80%;
     left: 50%;
     color: #fff;
+    font-size: 150%;
 }
 
 .nextImg {

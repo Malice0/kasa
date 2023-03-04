@@ -39,13 +39,18 @@
     cursor: pointer;
 }
 
-.collapse p {
+.collapseContent {
     background-color: #F6F6F6;
     color: #FF6060;
     margin-top: 0px;
     padding: 20px 10px 30px;
     border-radius: 10px;
     font-size: 20px;
+}
+
+.collapseContentList {
+    padding: 0px 10px;
+    
 }
 
 @media screen and (max-width: 770px) {

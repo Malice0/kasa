@@ -18,30 +18,25 @@ function Aboutcollapse({ title, content }) {
                     alt="montrer le contenu"
                 />
             </h2>
-            {Array.isArray(content) ? (
-                content.map((item, index) => {
-                    return (
-                        <p
-                            className={
-                                isOpen
-                                    ? 'collapseContent'
-                                    : 'collapseContentHidden'
-                            }
-                            key={index}
-                        >
-                            {item}
-                        </p>
-                    )
-                })
-            ) : (
-                <p
-                    className={
-                        isOpen ? 'collapseContent' : 'collapseContentHidden'
-                    }
-                >
-                    {content}
-                </p>
-            )}
+            <div
+                className={isOpen ? 'collapseContent' : 'collapseContentHidden'}
+            >
+                {Array.isArray(content) ? (
+                    content.map((item, index) => {
+                        return <p key={index} className={
+                            isOpen ? 'collapseContentList' : 'collapseContentHidden'
+                        }>{item}</p>
+                    })
+                ) : (
+                    <p
+                        className={
+                            isOpen ? 'collapseContent' : 'collapseContentHidden'
+                        }
+                    >
+                        {content}
+                    </p>
+                )}
+            </div>
         </div>
     )
 }
