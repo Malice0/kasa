@@ -1,24 +1,27 @@
 .arrowUp {
     transform: rotate(0deg);
-    transition: 0.2s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 .arrowDown {
     transform: rotate(180deg);
-    transition: 0.2s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 .collapseContent {
     opacity: 1;
     visibility: visible;
-    transition: visibility 0.5s ease-in-out,
-        opacity 0.5s ease-in-out,
+    transition: visibility 0.2s ease-in-out,
+        opacity 0.2s ease-in-out,
         height 0.2s ease-in-out;
 }
 
 .collapseContentHidden {
-    display: none;
-    /* transition: 0.5s ease-in; */
+    visibility: hidden;
+    height: 0px;
+    opacity: 0;
+    transition: opacity 0.05s ease-in-out, visibility 0.05s ease-in-out,
+        height 0.2s ease-in-out;
 }
 
 .collapse {
@@ -46,10 +49,12 @@
 }
 
 @media screen and (max-width: 770px) {
-    .collapse h2, .collapse p {
+
+    .collapse h2,
+    .collapse p {
         font-size: large;
     }
-    
+
 }
 
 @media screen and (max-width: 650px) {

@@ -22,6 +22,12 @@
     font-size: 25px;
 }
 
+
+.aboutContent .collapseContentHidden  {
+    padding: 0px;
+    transition: 0.1s ease-in-out;
+}
+
 @media screen and (max-width: 650px) {
     .aboutContent {
         margin: 20px;

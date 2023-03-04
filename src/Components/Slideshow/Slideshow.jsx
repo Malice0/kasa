@@ -2,7 +2,7 @@ import slideArrow from '../../assets/dropdown.svg'
 import { useState, useEffect } from 'react'
 import '../../Styles/SlideShow.css'
 
-function Slideshow({ isSlide, src, data, alt }) {
+function Slideshow({ data, alt }) {
     const [isIndex, setIsIndex] = useState(0)
     const images = data.pictures
 
@@ -27,11 +27,14 @@ function Slideshow({ isSlide, src, data, alt }) {
                             onClick={prevSlide}
                         />
                     </div>
+                    <div className='imgBullet'>
                     <img
                         src={data.pictures[isIndex]}
                         alt={alt}
                         className="imgSlider"
                     />
+                    <p key={isIndex}>{isIndex +1}/{images.length}</p>
+                    </div>
                     <div id="arrow" className="nextImg">
                         <img
                             src={slideArrow}

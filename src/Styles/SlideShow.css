@@ -17,6 +17,17 @@
     height: 50px;
 }
 
+.imgBullet {
+    width: 100%;
+}
+
+.imgBullet p {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    color: #fff;
+}
+
 .nextImg {
     position: absolute;
     right: 0;

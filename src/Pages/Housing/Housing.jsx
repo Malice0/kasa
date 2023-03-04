@@ -13,16 +13,11 @@ export default function Housing() {
     const rating = data[0].rating
     const host = data[0].host.picture
     const equipment = [data[0].equipments]
-
-    const [isSlide, setIsSlide] = useState([])
-    useEffect(() => {
-        const data = Datas.filter((data) => data.id === id)
-		setIsSlide(data[0].pictures);
-	}, [id]);
+    // console.log(equipment);
 
     return (
         <main className="main">
-            <Slideshow data={data[0]} src={data[0].cover} alt={data[0].title} isSlide={isSlide} />
+            <Slideshow data={data[0]} alt={data[0].title}/>
             <div className="HousingContent">
                 <div className="content">
                     <h1>{data[0].title}</h1>
