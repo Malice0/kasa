@@ -8,6 +8,10 @@
     transition: 0.3s ease-in-out;
 }
 
+.collapseTitle {
+    cursor: pointer;
+}
+
 .collapseContent {
     opacity: 1;
     visibility: visible;

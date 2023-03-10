@@ -8,7 +8,7 @@ import About from './Pages/About/About'
 import Housing from './Pages/Housing/Housing'
 import Header from './Components/header/Hearder'
 import Footer from './Components/Footer/Footer'
-import Error from './Components/Error/index'
+import Error from './Components/Error/error'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 

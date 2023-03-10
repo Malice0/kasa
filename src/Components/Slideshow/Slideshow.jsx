@@ -1,10 +1,10 @@
 import slideArrow from '../../assets/dropdown.svg'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import '../../Styles/SlideShow.css'
 
-function Slideshow({ data, alt }) {
-    const [isIndex, setIsIndex] = useState(0)
+export default function Slideshow({ data, alt }) {
     const images = data.pictures
+    const [isIndex, setIsIndex] = useState(0)
 
     const nextSlide = () => {
         setIsIndex(isIndex + 1)
@@ -17,7 +17,7 @@ function Slideshow({ data, alt }) {
     }
 
     return (
-        <div>
+        <>
             {images.length > 1 && (
                 <div className="img">
                     <div id="arrow" className="prevImg">
@@ -55,8 +55,6 @@ function Slideshow({ data, alt }) {
                     />
                 </div>
             )}
-        </div>
+        </>
     )
 }
-
-export default Slideshow

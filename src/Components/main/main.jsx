@@ -2,9 +2,9 @@ import Datas from '../../datas/data'
 import Card from '../Card/Card'
 import '../../Styles/Main.css'
 
-function Main() {
+export default function Main() {
     return (
-        <div className='homeGallery'>
+        <main className='homeGallery'>
             {Datas.map(data => {
                 return (
                     <Card
@@ -15,8 +15,6 @@ function Main() {
                     />
                 )
             })}
-        </div>
+        </main>
     )
 }
-
-export default Main
