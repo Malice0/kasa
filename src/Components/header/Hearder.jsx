@@ -1,6 +1,6 @@
 import '../../Styles/Header.css'
 import logo from '../../assets/logo.svg'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { useEffect } from 'react'
 
 export default function Header() {
@@ -16,12 +16,12 @@ export default function Header() {
             </Link>
             <nav>
                 <ul>
-                    <Link to="/" className="navLink">
+                    <NavLink exact to="/" className="navLink">
                         Accueil
-                    </Link>
-                    <Link to="/about" className="navLink">
+                    </NavLink>
+                    <NavLink exact to="/about" className="navLink">
                         A propos
-                    </Link>
+                    </NavLink>
                 </ul>
             </nav>
         </div>

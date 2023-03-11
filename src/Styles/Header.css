@@ -9,9 +9,8 @@
     color: #FF6060;
 }
 
-.navLink:first-child {
-    text-decoration: underline;
-}
+.active {
+    text-decoration: underline;}
 
 nav {
     display: flex;
